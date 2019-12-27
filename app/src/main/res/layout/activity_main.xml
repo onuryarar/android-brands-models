@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:id="@+id/logo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/acm_imageView"
+                android:layout_width="229dp"
+                android:layout_height="187dp"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/new_logo"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/logo_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acm_imageView"
+                android:layout_marginTop="-80dp"
+                android:text="Bilmemen Ayıp"
+                android:textColor="#CCE63632"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_below="@+id/logo_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="40dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/username_txt"
+                    style="@style/InputTheme"
+                    android:ems="10"
+                    android:hint="Kullanıcı Adı"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/password_txt"
+                    style="@style/InputTheme"
+                    android:ems="10"
+                    android:hint="Şifre"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/login_btn"
+                    style="@style/ButtonTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giriş Yap"
+                    android:textAllCaps="false"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
